@@ -10,7 +10,7 @@ export default function Home() {
           <h2 className="text-sky-400 font-semibold tracking-wide uppercase text-sm mb-3">{profile.title}</h2>
           <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6">{profile.name}</h1>
           <p className="text-lg text-slate-400 leading-relaxed mb-4">{profile.summary}</p>
-          <Link href="/statement" className="inline-block text-sky-400 font-medium hover:text-sky-300 mb-8 transition-colors">Read my Research Statement &rarr;</Link>
+          <Link href="/statement" className="inline-block text-sky-400 font-medium hover:text-sky-300 mb-8 transition-colors">Read my Research Statement &rarr;</Link><span className="mx-3 text-slate-600">|</span><Link href="/about" className="inline-block text-sky-400 font-medium hover:text-sky-300 mb-8 transition-colors">About Me</Link>
           
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium">
             <a href={`mailto:${profile.email}`} className="bg-sky-500 text-slate-950 px-5 py-2.5 rounded-lg hover:bg-sky-400 transition-colors">Get in touch</a>
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <footer className="border-t border-slate-800 py-10 text-center"><p className="text-slate-500 text-sm">&copy; 2026 {profile.name}</p></footer>
+      
     </main>
   );
 }
