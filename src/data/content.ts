@@ -40,8 +40,27 @@ export const skills = [
   },
 ];
 
-export const projects = [
+
   {
+    slug: "medlocate-ng",
+    title: "MedLocateNG - Healthcare Discovery Platform",
+    shortDescription:
+      "A web platform to help Nigerians find nearby hospitals, pharmacies, blood banks, and doctors, providing directions and real-time facility information.",
+    tags: ["Software Engineering", "Web App", "Healthcare Tech", "UI/UX"],
+    problem:
+      "In emergency situations or when living in remote areas, finding a functioning hospital, blood bank, or pharmacy quickly is difficult. There is a lack of centralized, accessible information regarding facility locations and contacts across all 36 Nigerian states.",
+    approach:
+      "Built a responsive web application that categorizes medical facilities (Hospitals, Pharmacies, Blood Banks, Doctors). Designed a clean, accessible interface that allows users to search by location, view facility details, and access emergency contacts and directions quickly, even on mobile devices.",
+    result:
+      "A fully functional discovery platform that bridges the gap between patients and healthcare providers, significantly reducing the time spent searching for emergency medical care in Nigeria.",
+    contribution:
+      "I designed the UI/UX and developed the frontend architecture. I built the search and filter logic, integrated the location data for facilities, and ensured the platform was responsive and fast enough to be used in high-pressure emergency scenarios.",
+    improvement:
+      "In the future, I would integrate the Google Maps API for real-time GPS routing and turn-by-turn directions. I would also add a 'verified' badge system for facilities and allow users to submit real-time updates on facility availability (e.g., 'blood bank currently out of O-negative').",
+    github: "https://github.com/Sholnco",
+    link: "",
+  },
+{
     slug: "biomedical-incubator",
     title: "Biomedical Incubator Design Project",
     shortDescription:
