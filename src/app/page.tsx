@@ -4,37 +4,86 @@ import { profile, skills, projects, experience, education, publication, research
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-sky-500/30">
-      <section className="relative max-w-5xl mx-auto px-6 pt-24 pb-16 border-b border-slate-800/50">
-        <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl"></div>
-        <div className="relative z-10 max-w-3xl">
-          <h2 className="text-sky-400 font-semibold tracking-wide uppercase text-sm mb-3">{profile.title}</h2>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6">{profile.name}</h1>
-          <p className="text-lg text-slate-400 leading-relaxed mb-4">{profile.summary}</p>
-          <Link href="/statement" className="inline-block text-sky-400 font-medium hover:text-sky-300 mb-8 transition-colors">Read my Research Statement &rarr;</Link><span className="mx-3 text-slate-600">|</span><Link href="/about" className="inline-block text-sky-400 font-medium hover:text-sky-300 mb-8 transition-colors">About Me</Link>
+      
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden border-b border-slate-800/50">
+        {/* Background Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+        
+        <div className="relative max-w-5xl mx-auto px-6 pt-32 pb-24 text-center z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm font-medium mb-8">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+            </span>
+            Available for research & engineering roles
+          </div>
           
-          <div className="flex flex-wrap items-center gap-4 text-sm font-medium">
-            <a href={`mailto:${profile.email}`} className="bg-sky-500 text-slate-950 px-5 py-2.5 rounded-lg hover:bg-sky-400 transition-colors">Get in touch</a>
-            <a href={profile.cvUrl} className="bg-slate-800 text-white px-5 py-2.5 rounded-lg hover:bg-slate-700 transition-colors border border-slate-700">Download CV</a>
-            <div className="flex items-center gap-4 ml-2">
-              <a href={profile.github} className="text-slate-400 hover:text-white transition-colors">GitHub</a>
-              <a href={profile.linkedin} className="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-              <a href={profile.orcid} className="text-slate-400 hover:text-white transition-colors">ORCID</a>
-            </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
+            {profile.name}
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-sky-400 font-semibold mb-6">
+            {profile.title}
+          </h2>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
+            {profile.summary}
+          </p>
+          
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <Link href="/about" className="bg-sky-500 text-slate-950 px-8 py-3 rounded-lg font-bold hover:bg-sky-400 transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+              About Me
+            </Link>
+            <Link href="/statement" className="bg-slate-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-700 transition-colors border border-slate-700">
+              Research Statement
+            </Link>
+            <a href={profile.cvUrl} className="text-slate-300 hover:text-white px-6 py-3 font-medium transition-colors">
+              Download CV &darr;
+            </a>
           </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6 py-16 space-y-24">
+      <div className="max-w-5xl mx-auto px-6 py-20 space-y-32">
+        
+        {/* HIGHLIGHTS STRIP */}
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 border-y border-slate-800 py-10">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-1">4+</div>
+            <div className="text-sm text-slate-500 font-medium">Years Lab Experience</div>
+          </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="text-3xl font-bold text-white mb-1">3</div>
+            <div className="text-sm text-slate-500 font-medium">Major Software Projects</div>
+          </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="text-3xl font-bold text-white mb-1">1</div>
+            <div className="text-sm text-slate-500 font-medium">Peer-Reviewed Publication</div>
+          </div>
+          <div className="text-center border-l border-slate-800">
+            <div className="text-3xl font-bold text-white mb-1">8+</div>
+            <div className="text-sm text-slate-500 font-medium">Professional Certifications</div>
+          </div>
+        </section>
+
+        {/* PROJECTS */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">01</span> Selected Projects</h2>
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2">Selected Projects</h2>
+              <p className="text-slate-400">Where biology meets engineering and code.</p>
+            </div>
+          </div>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((p) => (
-              <Link key={p.slug} href={`/projects/${p.slug}`} className="group relative block p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/50 transition-all duration-300">
+              <Link key={p.slug} href={`/projects/${p.slug}`} className="group relative flex flex-col p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-900 transition-all duration-300">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/5 rounded-bl-full -z-10 group-hover:bg-sky-500/10 transition-colors"></div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">{p.title}</h3>
-                <p className="text-slate-400 text-sm mb-6 leading-relaxed">{p.shortDescription}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-slate-400 text-sm mb-8 flex-grow leading-relaxed">{p.shortDescription}</p>
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {p.tags.map((t) => (
-                    <span key={t} className="text-xs font-medium bg-slate-950 text-slate-300 px-3 py-1 rounded-full border border-slate-800">{t}</span>
+                    <span key={t} className="text-xs font-semibold bg-slate-950 text-slate-300 px-3 py-1.5 rounded-md border border-slate-800 group-hover:border-slate-700 transition-colors">
+                      {t}
+                    </span>
                   ))}
                 </div>
               </Link>
@@ -42,29 +91,33 @@ export default function Home() {
           </div>
         </section>
 
+        {/* EXPERIENCE & EDUCATION */}
         <section className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">02</span> Experience</h2>
-            <div className="space-y-8 border-l-2 border-slate-800 ml-3 pl-6">
+            <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Experience</h2>
+            <div className="space-y-8 border-l border-slate-800 ml-3 pl-6">
               {experience.map((e, i) => (
                 <div key={i} className="relative">
-                  <div className="absolute -left-[31px] top-1.5 w-3 h-3 bg-sky-500 rounded-full ring-4 ring-slate-950"></div>
-                  <h3 className="font-semibold text-white text-lg">{e.role}</h3>
-                  <p className="text-sky-400 text-sm mb-1">{e.org}</p>
-                  <p className="text-slate-500 text-xs font-medium mb-3">{e.period}</p>
-                  <ul className="space-y-2 text-sm text-slate-400 leading-relaxed">{e.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
+                  <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 bg-sky-500 rounded-full ring-4 ring-slate-950"></div>
+                  <h3 className="font-bold text-white text-lg">{e.role}</h3>
+                  <p className="text-sky-400 text-sm font-medium mb-1">{e.org}</p>
+                  <p className="text-slate-500 text-xs font-semibold mb-3 tracking-wide uppercase">{e.period}</p>
+                  <ul className="space-y-2 text-sm text-slate-400 leading-relaxed list-disc list-outside ml-4">
+                    {e.bullets.map((b, j) => <li key={j}>{b}</li>)}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
+
           <div>
-            <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">03</span> Education</h2>
+            <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Education</h2>
             <div className="space-y-6">
               {education.map((ed, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                <div key={i} className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
                   <h3 className="font-bold text-white text-lg">{ed.degree}</h3>
-                  <p className="text-sky-400 text-sm mb-1">{ed.school}</p>
-                  <p className="text-slate-500 text-xs font-medium mb-3">{ed.period}</p>
+                  <p className="text-sky-400 text-sm font-medium mb-1">{ed.school}</p>
+                  <p className="text-slate-500 text-xs font-semibold mb-3 tracking-wide uppercase">{ed.period}</p>
                   {ed.detail && <p className="text-slate-400 text-sm leading-relaxed">{ed.detail}</p>}
                 </div>
               ))}
@@ -72,46 +125,66 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SKILLS */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">04</span> Technical Skills</h2>
+          <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Technical Skills</h2>
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
             {skills.map((group) => (
-              <div key={group.category} className="border-b border-slate-800/50 pb-4">
-                <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider">{group.category}</h3>
-                <div className="flex flex-wrap gap-2">{group.items.map(item => <span key={item} className="text-sm text-slate-400 bg-slate-900 px-3 py-1 rounded-md border border-slate-800">{item}</span>)}</div>
+              <div key={group.category}>
+                <h3 className="text-sm font-bold text-sky-400 mb-3 uppercase tracking-wider">{group.category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map(item => (
+                    <span key={item} className="text-sm text-slate-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="grid md:grid-cols-2 gap-16 pt-10 border-t border-slate-800/50">
+        {/* RESEARCH & CERTIFICATIONS */}
+        <section className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">05</span> Research Interests</h2>
+            <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Research Interests</h2>
             <ul className="space-y-3">
               {researchInterests.map((interest, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-300 text-sm hover:text-sky-400 transition-colors"><span className="text-sky-500 mt-0.5">&#9642;</span><Link href="/research">{interest.title}</Link></li>
+                <li key={i} className="flex items-start gap-3 text-slate-300 hover:text-sky-400 transition-colors">
+                  <span className="text-sky-500 mt-1">&#9642;</span>
+                  <Link href="/research" className="font-medium">{interest.title}</Link>
+                </li>
               ))}
             </ul>
           </div>
+
           <div>
-            <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">06</span> Certifications & Training</h2>
+            <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Certifications & Training</h2>
             <ul className="space-y-3">
               {certifications.map((cert, i) => (
-                <li key={i} className="flex items-start gap-3 text-slate-400 text-sm"><span className="text-sky-500 mt-0.5">&#9642;</span>{cert}</li>
+                <li key={i} className="flex items-start gap-3 text-slate-400 text-sm">
+                  <span className="text-sky-500 mt-1">&#9642;</span>
+                  {cert}
+                </li>
               ))}
             </ul>
           </div>
         </section>
 
-        <section className="pt-10 border-t border-slate-800/50">
-          <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3"><span className="bg-sky-500/20 text-sky-400 p-2 rounded-lg text-sm">07</span> Publication</h2>
-          <div className="p-8 rounded-2xl bg-slate-900 border border-slate-800">
-            <p className="text-slate-300 leading-relaxed text-sm md:text-base mb-4">{publication.citation}</p>
-            <a href={publication.doi} target="_blank" rel="noreferrer" className="inline-block text-sm font-semibold text-sky-400 hover:text-sky-300">Read Paper (DOI) &rarr;</a>
+        {/* PUBLICATION */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Publication</h2>
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/50 border border-slate-800 hover:border-sky-500/30 transition-colors">
+            <p className="text-slate-300 leading-relaxed text-sm md:text-base mb-6 font-medium">
+              {publication.citation}
+            </p>
+            <a href={publication.doi} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-sky-300 bg-sky-500/10 px-4 py-2 rounded-lg transition-colors">
+              Read Paper (DOI) &rarr;
+            </a>
           </div>
         </section>
+
       </div>
-      
     </main>
   );
 }
