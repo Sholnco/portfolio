@@ -50,14 +50,15 @@ export default function AboutPage() {
             </ul>
           </section>
 
-                    <section>
+          <section>
             <h2 className="text-xl font-bold text-sky-400 mb-3">Building MoTech Connect</h2>
             <p>
               Beyond the lab, I am the founder of <strong>MoTech Connect</strong>, a technology and biomedical innovation brand founded in 2024 and officially registered with the Nigerian government (CAC and SMEDAN) in 2026. Through MoTech Connect, I bridge the gap between wet-lab research and software engineering by offering AI/Bioinformatics consulting and delivering digital skills training to students and researchers.
             </p>
           </section>
 
-
+          <section>
+            <h2 className="text-xl font-bold text-sky-400 mb-3">Outside Work</h2>
             <p>
               Beyond the lab and the code, I enjoy teaching (AI, science subjects, and programming) and mentoring students. I am particularly interested in building educational tools that make technical subjects more accessible, which is where my teaching and software work meet.
             </p>
