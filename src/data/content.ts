@@ -1,7 +1,7 @@
 export const profile = {
   name: "Matthew Olushola Oke",
   title: "Biomedical Scientist, Engineer & Researcher",
-  subtitle: "AI/ML · Bioinformatics · Software",
+  subtitle: "AI/ML • Bioinformatics • Software",
   location: "Lagos, Nigeria",
   email: "matthewolushola@gmail.com",
   phone: "+234 813 055 8720",
@@ -16,7 +16,7 @@ export const profile = {
 export const skills = [
   {
     category: "Laboratory & Biomedical Science",
-    items: ["Medical Microbiology", "Pharmaceutical Microbiology", "Biotechnology", "Microbial Analysis", "Laboratory Diagnostics", "Antimicrobial Testing", "Specimen Handling", "Laboratory Safety & Quality"],
+    items: ["Medical Microbiology", "Pharmaceutical Microbiology", "Biotechnology", "Microbial Analysis", "Laboratory Diagnostics", "Antimicrobial Testing", "Specimen Handling", "Laboratory Safety"],
   },
   {
     category: "Programming & Software",
@@ -40,55 +40,15 @@ export const skills = [
   },
 ];
 
-
+export const projects = [
   {
-    slug: "medlocate-ng",
-    title: "MedLocateNG - Healthcare Discovery Platform",
-    shortDescription:
-      "A web platform to help Nigerians find nearby hospitals, pharmacies, blood banks, and doctors, providing directions and real-time facility information.",
-    tags: ["Software Engineering", "Web App", "Healthcare Tech", "UI/UX"],
-    problem:
-      "In emergency situations or when living in remote areas, finding a functioning hospital, blood bank, or pharmacy quickly is difficult. There is a lack of centralized, accessible information regarding facility locations and contacts across all 36 Nigerian states.",
-    approach:
-      "Built a responsive web application that categorizes medical facilities (Hospitals, Pharmacies, Blood Banks, Doctors). Designed a clean, accessible interface that allows users to search by location, view facility details, and access emergency contacts and directions quickly, even on mobile devices.",
-    result:
-      "A fully functional discovery platform that bridges the gap between patients and healthcare providers, significantly reducing the time spent searching for emergency medical care in Nigeria.",
-    contribution:
-      "I designed the UI/UX and developed the frontend architecture. I built the search and filter logic, integrated the location data for facilities, and ensured the platform was responsive and fast enough to be used in high-pressure emergency scenarios.",
-    improvement:
-      "In the future, I would integrate the Google Maps API for real-time GPS routing and turn-by-turn directions. I would also add a 'verified' badge system for facilities and allow users to submit real-time updates on facility availability (e.g., 'blood bank currently out of O-negative').",
-    github: "https://github.com/Sholnco",
-    link: "",
-  },
-{
-    slug: "biomedical-incubator",
-    title: "Biomedical Incubator Design Project",
-    shortDescription:
-      "Low-cost working biomedical incubator prototype featuring temperature stabilization, forced-air heat distribution, and independent environmental monitoring.",
-    tags: ["Biomedical Engineering", "Electrical Work", "Hardware", "Lab Equipment"],
-    problem:
-      "Standard laboratory incubators are expensive and often out of reach for low-resource laboratories, creating a need for a reliable, low-cost alternative for maintaining cell and microbial cultures.",
-    approach:
-      "Designed and built a working prototype from the ground up, handling the electrical and thermal engineering. Implemented a forced-air heat distribution system for temperature stabilization, built in independent environmental monitoring, and applied safety-focused thermal management to ensure reliable operation.",
-    result:
-      "A fully working biomedical incubator prototype that demonstrates thermal uniformity, effective insulation, and independent environmental control for laboratory applications.",
-    contribution: "I handled the electrical and thermal engineering. I designed the forced-air distribution, implemented the temperature stabilization circuit, and built the independent environmental monitoring system.",
-    improvement: "For a production version, I would swap the basic thermal sensors for industrial-grade PID controllers and add a digital interface (LCD/IoT) for real-time data logging to make it fully automated.",
-    github: "",
-    link: "",
-  },
-{
     slug: "bccas",
     title: "Biological Colony Chamber Analysis System (BCCAS)",
-    shortDescription:
-      "Computer-vision system that automatically detects, counts, and analyses microbial colonies from laboratory plate images.",
+    shortDescription: "Computer-vision system that automatically detects, counts, and analyses microbial colonies from laboratory plate images.",
     tags: ["Python", "OpenCV", "Machine Learning", "Microbiology"],
-    problem:
-      "Manual microbial colony counting is slow, subjective, and error-prone. Laboratory workflows need a consistent, automated method for quantifying colonies from plate images.",
-    approach:
-      "Built an image-processing pipeline using OpenCV to detect colonies from plate photographs, integrated machine-learning refinement for count accuracy, and added plate calibration, quality-control checks, and statistical analysis. Designed around real microbiology laboratory workflows.",
-    result:
-      "A working system that automates colony detection and quantification, connects microbiological lab workflows to biomedical software, and provides research-oriented data management.",
+    problem: "Manual microbial colony counting is slow, subjective, and error-prone. Laboratory workflows need a consistent, automated method for quantifying colonies from plate images.",
+    approach: "Built an image-processing pipeline using OpenCV to detect colonies from plate photographs, integrated machine-learning refinement for count accuracy, and added plate calibration, quality-control checks, and statistical analysis. Designed around real microbiology laboratory workflows.",
+    result: "A working system that automates colony detection and quantification, connects microbiological lab workflows to biomedical software, and provides research-oriented data management.",
     contribution: "I designed the entire computer vision pipeline (OpenCV) and integrated the machine learning models for colony counting. I also developed the plate calibration and QC assessment logic.",
     improvement: "If I rebuilt this, I would use a larger, more diverse dataset of plate images with varying lighting conditions. The current pipeline struggles with heavily contaminated plates or uneven agar surfaces, which I would solve by implementing adaptive thresholding and a deep-learning segmentation model (like U-Net).",
     github: "https://github.com/Sholnco",
@@ -97,35 +57,55 @@ export const skills = [
   {
     slug: "t2dm-model",
     title: "T2DM Computational Biomedical Model",
-    shortDescription:
-      "Differential-equation model of glucose-insulin dynamics in Type 2 Diabetes Mellitus, solved numerically with RK4.",
+    shortDescription: "Differential-equation model of glucose-insulin dynamics in Type 2 Diabetes Mellitus, solved numerically with RK4.",
     tags: ["Python", "Numerical Methods", "Biomedical Modelling", "RK4"],
-    problem:
-      "Understanding glucose-insulin dynamics in Type 2 Diabetes requires modelling how physiological variables change over time - useful for computational analysis of the disease.",
-    approach:
-      "Developed a mathematical model representing glucose-insulin dynamics, applied differential-equation modelling to capture physiological change over time, and implemented numerical solution methods including Fourth-Order Runge-Kutta (RK4) to analyse model parameters and system behaviour.",
-    result:
-      "A computational model demonstrating the integration of biomedical engineering, mathematical modelling, numerical methods, and computational analysis of a real physiological system.",
+    problem: "Understanding glucose-insulin dynamics in Type 2 Diabetes requires modelling how physiological variables change over time - useful for computational analysis of the disease.",
+    approach: "Developed a mathematical model representing glucose-insulin dynamics, applied differential-equation modelling to capture physiological change over time, and implemented numerical solution methods including Fourth-Order Runge-Kutta (RK4) to analyse model parameters and system behaviour.",
+    result: "A computational model demonstrating the integration of biomedical engineering, mathematical modelling, numerical methods, and computational analysis of a real physiological system.",
     contribution: "I formulated the mathematical equations representing glucose-insulin dynamics, implemented the Fourth-Order Runge-Kutta (RK4) numerical solver in Python, and analyzed the resulting physiological parameter changes.",
     improvement: "The current model relies on standard physiological parameters. I would improve it by incorporating patient-specific data (e.g., varying insulin sensitivity) to simulate individualized disease progression.",
     github: "https://github.com/Sholnco",
     link: "",
   },
   {
+    slug: "biomedical-incubator",
+    title: "Biomedical Incubator Design Project",
+    shortDescription: "Low-cost working biomedical incubator prototype featuring temperature stabilization, forced-air heat distribution, and independent environmental monitoring.",
+    tags: ["Biomedical Engineering", "Electrical Work", "Hardware", "Lab Equipment"],
+    problem: "Standard laboratory incubators are expensive and often out of reach for low-resource laboratories, creating a need for a reliable, low-cost alternative for maintaining cell and microbial cultures.",
+    approach: "Designed and built a working prototype from the ground up, handling the electrical and thermal engineering. Implemented a forced-air heat distribution system for temperature stabilization, built in independent environmental monitoring, and applied safety-focused thermal management to ensure reliable operation.",
+    result: "A fully working biomedical incubator prototype that demonstrates thermal uniformity, effective insulation, and independent environmental control for laboratory applications.",
+    contribution: "I handled the electrical and thermal engineering. I designed the forced-air distribution, implemented the temperature stabilization circuit, and built the independent environmental monitoring system.",
+    improvement: "For a production version, I would swap the basic thermal sensors for industrial-grade PID controllers and add a digital interface (LCD/IoT) for real-time data logging to make it fully automated.",
+    github: "",
+    link: "",
+  },
+  {
     slug: "psychosis-device",
     title: "Offline-First Support Device for Psychosis Management",
-    shortDescription:
-      "ESP32-S3 wearable/desktop device delivering medication reminders, symptom check-ins, and a rule-based assistant.",
+    shortDescription: "ESP32-S3 wearable/desktop device delivering medication reminders, symptom check-ins, and a rule-based assistant.",
     tags: ["ESP32-S3", "Embedded C", "Healthcare Tech"],
-    problem:
-      "Patients managing psychosis/schizophrenia need reliable support between clinical visits - medication reminders and symptom tracking - without dependence on internet connectivity.",
-    approach:
-      "Designed and built an offline-first ESP32-S3 device with medication reminders, symptom check-ins, and a rule-based conversational assistant with six deterministic intents - deliberately rule-based to avoid hallucination risk.",
-    result:
-      "A working offline-first support device that prioritises reliability and safety for a vulnerable patient group.",
+    problem: "Patients managing psychosis/schizophrenia need reliable support between clinical visits - medication reminders and symptom tracking - without dependence on internet connectivity.",
+    approach: "Designed and built an offline-first ESP32-S3 device with medication reminders, symptom check-ins, and a rule-based conversational assistant with six deterministic intents - deliberately rule-based to avoid hallucination risk.",
+    result: "A working offline-first support device that prioritises reliability and safety for a vulnerable patient group.",
+    contribution: "I designed the hardware architecture and wrote the embedded C code for the ESP32-S3. I developed the rule-based logic for the six deterministic intents to ensure absolute reliability.",
+    improvement: "I would add a low-power e-ink display to improve battery life and design a custom 3D-printed enclosure for daily wear.",
     github: "https://github.com/Sholnco",
     link: "",
   },
+  {
+    slug: "medlocate-ng",
+    title: "MedLocateNG - Healthcare Discovery Platform",
+    shortDescription: "A web platform to help Nigerians find nearby hospitals, pharmacies, blood banks, and doctors, providing directions and real-time facility information.",
+    tags: ["Software Engineering", "Web App", "Healthcare Tech", "UI/UX"],
+    problem: "In emergency situations or when living in remote areas, finding a functioning hospital, blood bank, or pharmacy quickly is difficult. There is a lack of centralized, accessible information regarding facility locations and contacts across all 36 Nigerian states.",
+    approach: "Built a responsive web application that categorizes medical facilities (Hospitals, Pharmacies, Blood Banks, Doctors). Designed a clean, accessible interface that allows users to search by location, view facility details, and access emergency contacts and directions quickly, even on mobile devices.",
+    result: "A fully functional discovery platform that bridges the gap between patients and healthcare providers, significantly reducing the time spent searching for emergency medical care in Nigeria.",
+    contribution: "I designed the UI/UX and developed the frontend architecture. I built the search and filter logic, integrated the location data for facilities, and ensured the platform was responsive and fast enough to be used in high-pressure emergency scenarios.",
+    improvement: "In the future, I would integrate the Google Maps API for real-time GPS routing and turn-by-turn directions. I would also add a 'verified' badge system for facilities and allow users to submit real-time updates on facility availability.",
+    github: "https://github.com/Sholnco",
+    link: "",
+  }
 ];
 
 export const experience = [
@@ -189,8 +169,7 @@ export const education = [
 ];
 
 export const publication = {
-  citation:
-    "Ekpunobi, F. N., Okoye, S. C., Oghonyon, E. I., Chukwunwejim, C. R., Ochieng, M. A., Idowu, O. T., Usen-Obong, S., Olushola, M. O., & Agu, K. C. (2025). Computational evaluation of indole alkaloids from Rauwolfia vomitoria as potential anticancer agents: Molecular docking and ADME profiling. Journal of Advances in Medical and Pharmaceutical Sciences, 27(10), 62-81.",
+  citation: "Ekpunobi, F. N., Okoye, S. C., Oghonyon, E. I., Chukwunwejim, C. R., Ochieng, M. A., Idowu, O. T., Usen-Obong, S., Olushola, M. O., & Agu, K. C. (2025). Computational evaluation of indole alkaloids from Rauwolfia vomitoria as potential anticancer agents: Molecular docking and ADME profiling. Journal of Advances in Medical and Pharmaceutical Sciences, 27(10), 62-81.",
   doi: "https://doi.org/10.9734/jamps/2025/v27i10823",
 };
 
