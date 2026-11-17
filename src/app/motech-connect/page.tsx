@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MoTechPage() {
   return (
@@ -8,15 +9,28 @@ export default function MoTechPage() {
           &larr; Back to Home
         </Link>
         
-        <h1 className="text-4xl font-extrabold text-white mb-2">MoTech Connect</h1>
-        <p className="text-xl text-sky-400 font-medium mb-6">Matthew Olushola Tech Connect</p>
-        
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 mb-12">
-          <p className="text-sm text-slate-300 font-medium">
-            A SMEDAN & CAC-registered technology and biomedical innovation brand.
-            <span className="text-slate-500 mt-2 block">Founded in 2024. Officially registered in 2026.</span>
-            <span className="text-slate-500 mt-1 block">CAC Registration: 9839773 | SMEDAN ID: 6246-470620928392</span>
-          </p>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+          {/* Logo Container */}
+          <div className="w-32 h-32 relative bg-white rounded-2xl p-2 flex-shrink-0 shadow-lg shadow-sky-500/10">
+            <Image 
+              src="/images/motech-logo.png" 
+              alt="MoTech Connect Logo" 
+              fill 
+              className="object-contain p-2 rounded-2xl"
+            />
+          </div>
+          
+          <div>
+            <h1 className="text-4xl font-extrabold text-white mb-2 text-center md:text-left">MoTech Connect</h1>
+            <p className="text-xl text-sky-400 font-medium mb-4 text-center md:text-left">Matthew Olushola Tech Connect</p>
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-4">
+              <p className="text-sm text-slate-300 font-medium text-center md:text-left">
+                A SMEDAN & CAC-registered technology and biomedical innovation brand.
+                <span className="text-slate-500 mt-2 block text-xs">Founded in 2024. Officially registered in 2026.</span>
+                <span className="text-slate-500 mt-1 block text-xs">CAC Registration: 9839773 | SMEDAN ID: 6246-470620928392</span>
+              </p>
+            </div>
+          </div>
         </div>
         
         <div className="space-y-12 text-slate-300 leading-relaxed text-lg">
