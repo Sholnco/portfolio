@@ -14,6 +14,8 @@ export default function Footer() {
           <a href={profile.github} target="_blank" rel="noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">GitHub</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">LinkedIn</a>
           <a href={profile.orcid} target="_blank" rel="noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">ORCID</a>
+          <a href="/motech-connect" className="text-sky-400 hover:text-sky-300 transition-colors">MoTech Connect</a>
+          <a href="/gallery" className="text-sky-400 hover:text-sky-300 transition-colors">Gallery</a>
         </div>
 
         <p className="text-slate-600 text-xs">
