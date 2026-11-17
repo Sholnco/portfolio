@@ -3,11 +3,10 @@ import { profile, skills, projects, experience, education, publication, research
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-sky-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-sky-500/30 overflow-hidden">
       
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden border-b border-slate-800/50">
-        {/* Background Grid Pattern */}
+      <section className="relative border-b border-slate-800/50">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
         
         <div className="relative max-w-5xl mx-auto px-6 pt-32 pb-24 text-center z-10">
@@ -16,7 +15,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
             </span>
-            Available for research & engineering roles
+            Available for research, engineering & consulting roles
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
@@ -42,6 +41,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* INFINITE MARQUEE SLIDER */}
+      <div className="border-b border-slate-800 bg-slate-900/50 py-6 overflow-hidden flex relative">
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10"></div>
+        
+        <div className="flex animate-marquee whitespace-nowrap gap-8 items-center text-sm font-bold tracking-wider text-slate-400 uppercase">
+          <span>Biomedical Research</span>
+          <span className="text-sky-500">•</span>
+          <span>AI & Machine Learning</span>
+          <span className="text-sky-500">•</span>
+          <span>Bioinformatics & Genomics</span>
+          <span className="text-sky-500">•</span>
+          <span>Computer Vision</span>
+          <span className="text-sky-500">•</span>
+          <span>Software Engineering</span>
+          <span className="text-sky-500">•</span>
+          <span>Biomedical Engineering</span>
+          <span className="text-sky-500">•</span>
+          <span>Digital Skills Training</span>
+          <span className="text-sky-500">•</span>
+          <span>STEM Education</span>
+          <span className="text-sky-500">•</span>
+          
+          {/* Duplicate for seamless loop */}
+          <span>Biomedical Research</span>
+          <span className="text-sky-500">•</span>
+          <span>AI & Machine Learning</span>
+          <span className="text-sky-500">•</span>
+          <span>Bioinformatics & Genomics</span>
+          <span className="text-sky-500">•</span>
+          <span>Computer Vision</span>
+          <span className="text-sky-500">•</span>
+          <span>Software Engineering</span>
+          <span className="text-sky-500">•</span>
+          <span>Biomedical Engineering</span>
+          <span className="text-sky-500">•</span>
+          <span>Digital Skills Training</span>
+          <span className="text-sky-500">•</span>
+          <span>STEM Education</span>
+          <span className="text-sky-500">•</span>
+        </div>
+      </div>
 
       <div className="max-w-5xl mx-auto px-6 py-20 space-y-32">
         
