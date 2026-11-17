@@ -13,7 +13,7 @@ export default function MoTechPage() {
           {/* Logo Container */}
           <div className="w-32 h-32 relative bg-white rounded-2xl p-2 flex-shrink-0 shadow-lg shadow-sky-500/10">
             <Image 
-              src="/images/motech-logo.png" 
+              src="/images/motech-logo.jpg" 
               alt="MoTech Connect Logo" 
               fill 
               className="object-contain p-2 rounded-2xl"
