@@ -94,8 +94,7 @@ export default function Home() {
             <div className="text-sm text-slate-500 font-medium">Years Lab Experience</div>
           </div>
           <div className="text-center border-l border-slate-800">
-            <div className="text-3xl font-bold text-white mb-1">3</div>
-            <div className="text-sm text-slate-500 font-medium">Major Software Projects</div>
+            <div className="text-3xl font-bold text-white mb-1">28+</div><div className="text-sm text-slate-500 font-medium">Open Source Projects</div>
           </div>
           <div className="text-center border-l border-slate-800">
             <div className="text-3xl font-bold text-white mb-1">1</div>
